@@ -9,21 +9,25 @@ A React application for searching GitHub users and exploring their repositories.
 - Search repositories
 - Sort repositories by stars or updates
 - Dark mode support
+- Mobile-responsive
 - Pagination
 
 ## Screenshots
 
 ### Light Mode
 
-<img width="1919" height="1053" alt="{CA31D46A-1DA2-4333-99CB-D5E128299712}" src="https://github.com/user-attachments/assets/e8cdd4ae-92cc-47ea-9323-3ddc0794dedf" />
+<img width="1913" height="1052" alt="{52C48CD2-A531-4592-B68D-ACCDF8413780}" src="https://github.com/user-attachments/assets/dff5d605-1439-4922-ad49-31439e3bea07" />
 
-<img width="1918" height="1053" alt="{998AF336-DB9E-41F2-A374-277ADDE2FAAE}" src="https://github.com/user-attachments/assets/f6b96e86-25d6-4ffe-affc-cbbd84a3b71e" />
+<img width="1895" height="1058" alt="{F7D9D78D-158E-4593-85B0-6078D6237558}" src="https://github.com/user-attachments/assets/7beadb37-6919-416e-84f6-d193db356f99" />
+
 
 ### Dark Mode
 
-<img width="1920" height="1046" alt="{59BD55A1-050E-4F63-A1C3-62695B4476F1}" src="https://github.com/user-attachments/assets/f5ba09d6-9b36-4628-b587-e29e08578d0c" />
+<img width="1903" height="1037" alt="{45D8D924-B93F-4A73-A9D6-06CD6AF93B3E}" src="https://github.com/user-attachments/assets/7f752395-06ae-44bf-be34-2155a0658ce6" />
 
-<img width="1919" height="1049" alt="{8D651473-0CA5-46C8-AE4A-47D6DF8C43AE}" src="https://github.com/user-attachments/assets/83bf5c57-1a99-4de2-9707-34c2d9235f1f" />
+
+<img width="1894" height="1049" alt="{985A0D55-02D5-4A46-BA84-A5A6D7301567}" src="https://github.com/user-attachments/assets/2531bc58-3c1c-4c36-84a5-29b090420e7e" />
+
 
 ## Tech Stack
 
