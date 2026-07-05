@@ -15,6 +15,8 @@ import {
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import logo from "./assets/favicon.png";
+import darkLogo from "./assets/darkFavicon.png";
 
 function UserProfile({ userData }) {
   return (
@@ -138,12 +140,12 @@ function RepositoryList({
 }) {
   const scrollRef = useRef(null);
 
+  //Scroll Reset Effect
   useEffect(() => {
-    const viewport = scrollRef.current?.querySelector(
-      "[data-radix-scroll-area-viewport]",
-    );
-    if (viewport) viewport.scrollTop = 0;
-  }, [page]);
+    scrollRef.current
+      ?.querySelector("[data-radix-scroll-area-viewport]")
+      ?.scrollTo({ top: 0, behavior: "smooth" });
+  }, [page, sortBy]);
 
   return (
     <div className="mt-8">
@@ -162,7 +164,7 @@ function RepositoryList({
           />
 
           <Select value={sortBy} onValueChange={setSortBy}>
-            <SelectTrigger className="w-40 sm:w-[200px] shrink-0 sm:justify-self-end">
+            <SelectTrigger className="w-40 sm:w-50 shrink-0 sm:justify-self-end">
               <SelectValue placeholder="Sort repositories" />
             </SelectTrigger>
             <SelectContent>
@@ -256,6 +258,7 @@ function UserSkeleton() {
   );
 }
 
+// Dark & Light mode
 function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   return (
@@ -277,6 +280,8 @@ function App() {
   const [sortBy, setSortBy] = useState("updated");
   const [page, setPage] = useState(1);
   const [repoSearch, setRepoSearch] = useState("");
+
+  const { resolvedTheme } = useTheme();
 
   const reposPerPage = 20;
 
@@ -362,34 +367,50 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 w-full max-w-6xl mx-auto p-8">
         <Field>
-          <div className="relative flex justify-center items-center mb-4">
-            <div className="flex items-center gap-3">
-              <FaGithub className="h-10 w-10" />
-              <FieldLabel className="text-2xl font-bold">
-                Github Profile Explorer
-              </FieldLabel>
+          <div className="relative mb-6">
+            <div className="flex justify-center">
+              <div className="flex items-center gap-4">
+                <img
+                  src={resolvedTheme === "dark" ? darkLogo : logo}
+                  alt="GitSleuth logo"
+                  className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                />
+
+                <div className="flex flex-col">
+                  <FieldLabel className="text-2xl md:text-3xl font-bold">
+                    GitSleuth
+                  </FieldLabel>
+
+                  <p className="text-sm text-muted-foreground">
+                    Investigate developers, repositories, and coding activity.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <ThemeToggle />
+            <div className="absolute top-0 right-0">
+              <ThemeToggle />
+            </div>
           </div>
+
           <div className="flex justify-center mt-2">
             <Input
               value={text}
               onChange={(e) => setText(e.target.value)}
-              placeholder="Enter username"
+              placeholder="Enter a GitHub username..."
               aria-invalid={!!error}
-              containerClassName="w-96"
+              containerClassName="w-full max-w-md"
               className="h-11"
             />
           </div>
+
           <div className="flex justify-center mt-2">
-            {" "}
             {error && <FieldError>{error}</FieldError>}
           </div>
 
           {!loading && !userData && !error && (
             <div className="mt-16 text-center text-muted-foreground">
-              <p>Search for any public GitHub profile.</p>
+              <p>Search and investigate any public GitHub profile.</p>
             </div>
           )}
         </Field>
@@ -418,7 +439,7 @@ function App() {
       </main>
 
       <footer className="border-t pt-5 pb-5 text-center text-sm text-muted-foreground">
-        <p>GitHub Profile Explorer • © 2026 John Jacob Villa</p>
+        <p>GitSleuth • © 2026 John Jacob Villa</p>
 
         <div className="flex justify-center gap-6 mt-2">
           <a
