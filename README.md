@@ -16,17 +16,21 @@ A React application for searching GitHub users and exploring their repositories.
 
 ### Light Mode
 
-<img width="1913" height="1052" alt="{52C48CD2-A531-4592-B68D-ACCDF8413780}" src="https://github.com/user-attachments/assets/dff5d605-1439-4922-ad49-31439e3bea07" />
+<img width="1903" height="1054" alt="{EC3F219A-4548-4F88-A9C6-351123A01769}" src="https://github.com/user-attachments/assets/6f63f635-5358-4562-8e5e-ef66df2cbf18" />
 
-<img width="1895" height="1058" alt="{F7D9D78D-158E-4593-85B0-6078D6237558}" src="https://github.com/user-attachments/assets/7beadb37-6919-416e-84f6-d193db356f99" />
+
+<img width="1920" height="1055" alt="{B7C6A0C8-1F91-40F6-BAB1-A66974E1B778}" src="https://github.com/user-attachments/assets/3739ab71-219b-4d01-a714-f3b51c0bc304" />
+
 
 
 ### Dark Mode
 
-<img width="1903" height="1037" alt="{45D8D924-B93F-4A73-A9D6-06CD6AF93B3E}" src="https://github.com/user-attachments/assets/7f752395-06ae-44bf-be34-2155a0658ce6" />
+<img width="1918" height="1049" alt="{E6BF186D-51D9-4063-A6D5-16093B746818}" src="https://github.com/user-attachments/assets/7e33e1e2-10f3-48c9-bc67-a003cb18d9db" />
 
 
-<img width="1894" height="1049" alt="{985A0D55-02D5-4A46-BA84-A5A6D7301567}" src="https://github.com/user-attachments/assets/2531bc58-3c1c-4c36-84a5-29b090420e7e" />
+
+<img width="1917" height="1051" alt="{4D012385-0A41-45CD-8CA9-A83B132B9399}" src="https://github.com/user-attachments/assets/64768f1c-4260-4872-b3be-4134ce590cfb" />
+
 
 
 ## Tech Stack
@@ -39,4 +43,4 @@ A React application for searching GitHub users and exploring their repositories.
 
 # Live Demo
 
-https://githubprofileexplorer-jjv.vercel.app/
+https://gitsleuth.vercel.app/
