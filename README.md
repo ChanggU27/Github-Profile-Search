@@ -1,6 +1,6 @@
-# GitHub Profile Explorer
+# GitSleuth
 
-A React application for searching GitHub users and exploring their repositories.
+A React application for searching Public GitHub users and investigating their repositories.
 
 ## Features
 
